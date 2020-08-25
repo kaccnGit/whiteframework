@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>白盒测试方法列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body class="container">
+<br/>
+<h3>方法列表</h3>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>类名/Bean名</th>
+            <th>方法名</th>
+            <th>标注</th>
+            <th>容器</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="whiteMethod : ${methods}">
+            <th scope="row" width="60px" th:text="${methods.indexOf(whiteMethod)+1}">1</th>
+            <td th:text="${whiteMethod.className}"></td>
+            <td th:text="${whiteMethod.method}"></td>
+            <td width="200px" th:text="${whiteMethod.notes}">1</td>
+            <td width="50px" th:text="${whiteMethod.fromIOC}">1</td>
+            <td width="60px"><a th:href="@{/white/toExecute(index=${methods.indexOf(whiteMethod)})}">执行</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

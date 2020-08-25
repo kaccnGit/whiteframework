@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body class="container">
+<br/>
+<h3>用户列表</h3>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>用户名</th>
+            <th>性别</th>
+            <th>描述</th>
+            <th>修改</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <th scope="row" th:text="${user.userId}">1</th>
+            <td th:text="${user.userName}">neo</td>
+            <td th:text="${user.sex}">1</td>
+            <td th:text="${user.desc}">6</td>
+            <td><a th:href="@{/toEdit(id=${user.userId})}">编辑</a></td>
+            <td><a th:href="@{/delete(id=${user.userId})}">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <div class="col-sm-2 control-label">
+        <a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">新增</a>
+    </div>
+</div>
+
+</body>
+</html>
