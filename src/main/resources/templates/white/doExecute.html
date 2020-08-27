@@ -15,37 +15,37 @@
         <div class="form-group">
             <label for="userName" class="col-sm-2 control-label">类名</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="userName" id="userName" th:value="*{className}" placeholder="userName"/>
+                <input type="text" class="form-control" disabled="true" name="userName" id="userName" th:value="*{className}" placeholder="userName"/>
             </div>
         </div>
         <div class="form-group">
             <label for="method" class="col-sm-2 control-label">方法名</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="method"  id="method" th:value="*{method}" placeholder="method"/>
+                <input type="text" class="form-control" disabled="true" name="method"  id="method" th:value="*{method}" placeholder="method"/>
             </div>
         </div>
         <div class="form-group">
             <label for="notes" class="col-sm-2 control-label">标注</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="notes"  id="notes" th:value="*{notes}" placeholder="notes"/>
+                <input type="text" class="form-control" disabled="true" name="notes"  id="notes" th:value="*{notes}" placeholder="notes"/>
             </div>
         </div>
         <div class="form-group">
             <label for="fromIOC" class="col-sm-2 control-label">是否容器</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="fromIOC"  id="fromIOC" th:value="*{fromIOC}" placeholder="fromIOC"/>
+                <input type="text" class="form-control" disabled ="true" name="fromIOC"  id="fromIOC" th:value="*{fromIOC}" placeholder="fromIOC"/>
             </div>
         </div>
         <div class="form-group">
             <label for="params" class="col-sm-2 control-label">测试参数</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="params"  id="params" placeholder="测试参数，逗号隔开"/>
+                <input type="text" class="form-control" name="params" autocomplete="off" id="params" placeholder="测试参数，逗号隔开"/>
             </div>
         </div>
         <div class="form-group">
             <label for="times" class="col-sm-2 control-label">次数</label>
             <div class="col-sm-10">
-                <input type="text" required="true" class="form-control" name="times"  id="times" placeholder="请输入执行方法次数"/>
+                <input type="text" required="true" class="form-control" autocomplete="off" name="times"  id="times" placeholder="请输入执行方法次数"/>
             </div>
         </div>
         <div class="form-group">
